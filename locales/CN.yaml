@@ -53,7 +53,6 @@ Populares: 排行
 Novedades: 最新
 Busqueda: 搜索
 Descargar: 下载
-Sin Record: 无纪录
 Reportar: 举报
 ID del nivel: 关卡ID
 Victorias: 通关率
@@ -93,11 +92,11 @@ Experto: 极难
 'Ultimos ': 最近
 Ultima semana: 一周内
 Ultimo mes: 一月内
-Mis Superados: 已被通关
-Mis no superados: 未被通关
+Mis Superados: 我已通关
+Mis no superados: 我未通关
 Mas antiguos: 倒序
-Mis gustados: 有点赞
-Mis no gustados: 没有点赞
+Mis gustados: 我点赞
+Mis no gustados: 我没点赞
 Llega a la meta sin recibir daño: 未受伤的情况下过关
 Llega a la meta sin tocar el suelo una vez: 在离开地面后不碰地
 que hayas separado los pies de el: 的情况下过关

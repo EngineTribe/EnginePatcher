@@ -3,7 +3,7 @@ import yaml, math
 
 package_orig=input('输入原始文件名 (libyoyo.so / SMM_WE.exe): ')
 codec="utf-8"
-locale_file=input('输入语言文件名: (CN.yaml) ')
+locale_file=input('输入语言文件名: (CN.yaml / ES.yaml / EN.yaml) ')
 tokens_file="tokens.json"
 platform=input('输入平台代号 (PC代表电脑, MB代表安卓): ')
 

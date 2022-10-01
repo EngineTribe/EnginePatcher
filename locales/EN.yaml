@@ -1,0 +1,158 @@
+font_as.ttf: fontcjk.ttf
+JUGAR: PLAY
+2019-2022 | Franyer: Engine Tribe
+INICIAR SESION: USER LOGIN
+¡ADVERTENCIA!: DISCLAIMER
+Este es un "Fan Game" (De fans para fans): This game is a fan game
+por lo cual no está respaldado por Nintendo.: which is not endorsed by Nintendo.
+'Todas las imagenes, músicas y recursos utilizados': The copyright of the images, sounds
+en este son propiedad de Nintendo.: and others is owned by Nintendo.
+Graficos: Graphics
+Activado: Enabled
+Desactivado: Disabled
+Idioma: Lang.
+Español: English
+Detallados: Details
+Personaje: Character
+Ventana: Window
+Sonidos: Volume
+Sesion iniciada: Logged in
+Guardar Nivel: Save level
+Tradicional: Standard
+Puzles: Puzzle
+Contrarreloj: Speedrun
+Autoavance: Autoscroll
+Automatismos: Auto-mario
+Corto pero intenso: Short and Sweet
+Competitivo: Multiplayer
+Tematico: Themed
+Música: Music
+Artístico: Art
+Habilidad: Technical
+Disparos: Shooter
+Contra jefes: Boss battle
+En solitario: Singleplayer
+Aceptar: Accept
+No hay elementos para guardar: Can't save empty level
+Nivel Guardado Corectamente: Save completed
+'Se procedera a cargar un nivel, se borrarán': This will replace all objects
+todos los elementos colocados hasta ahora.: 'in the current level,'
+¿Deseas continuar?: continue?
+Publicar: Publish
+Editar: Edit
+Jugar: Play
+Explorar Niveles: Browse Levels
+Juego Local: Multiplayer
+Desafio Super Mario: Mario Challenge
+Prometedores: Featured
+Sin Record: No record
+Se agrego a prometedores: Added to featured
+Se elimino de prometedores: Added to featured
+#Record: Record
+Populares: Popular
+Novedades: Latest
+Busqueda: Browse
+Descargar: Download
+Reportar: Report
+ID del nivel: Level id
+Victorias: ClearRate
+Cargando: Loading
+NOMBRE DEL NIVEL: LEVEL NAME
+NOMBRE DEL CREADOR: MAKER NAME
+ESTILO DEL JUEGO: GAME STYLE
+Cualquiera: Any
+TEMA DEL CURSO: LEVEL THEME
+DIFICULTAD: DIFFICULTY
+TIEMPO: TIME
+HISTORIAL: RECORD
+REACCION: REACTION
+ORDEN: ORDER
+IDENTIFICADOR: LEVEL ID
+BUSCAR: SEARCH
+#New Super Mario Bros U: 新超马U
+#Super Mario Bros 3: 超马3代
+#Super Mario World: 超马世界
+#Super Mario Bros: 超马1代
+#Overworld: 地面
+#Underground: 地下
+#Castle: 城堡
+#Underwater: 水中
+#Ghost House: 鬼屋
+#Airship: 飞船
+#Forest: 丛林
+#Sky: 天
+#Desert: 沙漠
+#Snow: 冰
+#Autumn: 枫林
+#Beach: 海
+Facil: Easy
+Dificil: Hard
+Experto: Expert
+' dias': ' days'
+'Ultimos ': 'Last '
+Ultima semana: 'Last week'
+Ultimo mes: 'Last month'
+Mis Superados: Cleared
+Mis no superados: Not cleared
+Mas antiguos: Older
+Mis gustados: Liked
+Mis no gustados: Not liked
+Llega a la meta sin recibir daño: Reach goal without taking damage
+Llega a la meta sin tocar el suelo una vez: Reach the goal without
+que hayas separado los pies de el: touching ground once
+Llega a la meta sin tocar el suelo una vez que: Reach the goal without
+hayas separado los pies de él: touching ground once
+Llega a la meta sin salir del agua: Reach goal without leaving water
+Llega a la meta sin recoger ninguna moneda: Reach goal without collecting any coins
+
+Ninguno: None
+Lento: Slow
+Rapido: Fast
+SUPER MARIO MAKER WORLD ENGINE: 'SMM:WE ENGINE TRIBE'
+'Efectos (Estrella, POW)': 'Effects (Star, POW)'
+Controles Tactiles: Touch controller
+Controles SM4J: SM4Jcontroller
+La condición especial ya no puede cumplirse: Unable to meet clear conditions
+¡Genial!: Like!
+¡Así No!: Boo!
+Continuar: Continue
+Volver a empezar: Restart
+Guardabot: Coursebot
+Niveles Mundiales: Course World
+NOMBRE DE USUARIO: USERNAME
+Usuario: User
+Contraseña: Password
+Código: Code
+Error al recuperar los datos: Error retrieving data
+'Para poder publicar el nivel, debes comprobar': In order to publish the level, you must prove
+que puedes superarlo. ¿Quieres intentarlo ahora?: that you can beat it. Try it now?
+¡Superalo desde el principio!: Clear from start point!
+¡Superalo desde el checkpoint!: Clear from checkpoint!
+Publicando..: Publishing..
+Hubo un Problema al publicar el nivel: Failed to publish level
+Copiar y Salir: 'Copy & Back'
+Salir: Back
+Nivel descargado: Level downloaded
+El nivel ya existe: Already exists
+Feliz Navidad: Merry Xmas
+Ya es DOMINGO: It's SUNDAY
+A hacer niveles se ha dicho: let's make
+DOMINGO: SUN.
+LUNES: MON.
+MARTES: TUE.
+MIERCOLES: WED.
+JUEVES: THU.
+VIERNES: FRI.
+SABADO: SAT.
+No hay conexion a internet: No Internet connection
+Tiempo de conexion agotado: Connection timed out
+Programador: Programmer
+'Sonido/': 'Sounds/'
+#Spriters: 素材
+'Animación & Efectos': Animation & Effects
+Tipografía: Typography
+Aportes Adicionales: Other Contributions
+Agradecimientos Especiales: Special Thanks
+Power by/Recursos: Powered by
+Código: Code
+Reintentar: Refresh
