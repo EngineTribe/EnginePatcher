@@ -1,0 +1,156 @@
+font_as.ttf: fontcjk.ttf
+JUGAR: 玩
+2019-2022 | Franyer: 引擎部落
+INICIAR SESION: 登录帐号
+¡ADVERTENCIA!: 免责声明
+Este es un "Fan Game" (De fans para fans): 本游戏为同人游戏，
+por lo cual no está respaldado por Nintendo.: 未经任天堂许可。
+'Todas las imagenes, músicas y recursos utilizados': 其中的图像、声音等素材
+en este son propiedad de Nintendo.: 版权归任天堂所有。
+Graficos: 画质
+Activado: 启用
+Desactivado: 禁用
+Idioma: 语言
+Español: 中文
+Detallados: 高清
+Personaje: 人物
+Ventana: 窗口
+Sonidos: 音量
+Sesion iniciada: 登录成功
+Guardar Nivel: 保存关卡
+Tradicional: 标准
+Puzles: 解谜
+Contrarreloj: 计时挑战
+Autoavance: 自卷轴
+Automatismos: 自动图
+Corto pero intenso: 一次通过
+Competitivo: 对战
+Tematico: 机关
+Música: 音乐
+Artístico: 美术
+Habilidad: 技巧
+Disparos: 射击
+Contra jefes: BOSS战
+En solitario: 单人
+Aceptar: 确定
+No hay elementos para guardar: 不能保存空白关卡
+Nivel Guardado Corectamente: 保存完成
+'Se procedera a cargar un nivel, se borrarán': 这样会复盖当前关卡
+todos los elementos colocados hasta ahora.: '中的全部物件,'
+¿Deseas continuar?: 确定吗?
+Publicar: 发布
+Editar: 编辑
+Jugar: 玩
+Explorar Niveles: 全球关卡
+Juego Local: 多人
+Desafio Super Mario: 耐力挑战
+Prometedores: 推荐
+Sin Record: 无纪录
+Se agrego a prometedores: 加入到推荐中
+Se elimino de prometedores: 从推荐中删除
+Record: 纪录
+Populares: 排行
+Novedades: 最新
+Busqueda: 搜索
+Descargar: 下载
+Sin Record: 无纪录
+Reportar: 举报
+ID del nivel: 关卡ID
+Victorias: 通关率
+Cargando: 加载
+NOMBRE DEL NIVEL: 关卡名
+NOMBRE DEL CREADOR: 作者名
+ESTILO DEL JUEGO: 游戏风格
+Cualquiera: 任意
+TEMA DEL CURSO: 场景
+DIFICULTAD: 难度
+TIEMPO: 时间
+HISTORIAL: 纪录
+REACCION: 点赞
+ORDEN: 序
+IDENTIFICADOR: 关卡ID
+BUSCAR: 搜索
+New Super Mario Bros U: 新超马U
+Super Mario Bros 3: 超马3代
+Super Mario World: 超马世界
+Super Mario Bros: 超马1代
+Overworld: 地面
+Underground: 地下
+Castle: 城堡
+Underwater: 水中
+Ghost House: 鬼屋
+Airship: 飞船
+Forest: 丛林
+Sky: 天
+Desert: 沙漠
+Snow: 冰
+Autumn: 枫林
+Beach: 海
+Facil: 易
+Dificil: 困难
+Experto: 极难
+' dias': 天
+'Ultimos ': 最近
+Ultima semana: 一周内
+Ultimo mes: 一月内
+Mis Superados: 已被通关
+Mis no superados: 未被通关
+Mas antiguos: 倒序
+Mis gustados: 有点赞
+Mis no gustados: 没有点赞
+Llega a la meta sin recibir daño: 未受伤的情况下过关
+Llega a la meta sin tocar el suelo una vez: 在离开地面后不碰地
+que hayas separado los pies de el: 的情况下过关
+Llega a la meta sin tocar el suelo una vez que: 在离开地面后不碰地
+hayas separado los pies de él: 的情况下过关
+Llega a la meta sin salir del agua: 不离开水而过关
+Llega a la meta sin recoger ninguna moneda: 不吃金币的情况下过关
+Ninguno: 无
+Lento: 慢
+Rapido: 快
+SUPER MARIO MAKER WORLD ENGINE: 'SMM:WE 引擎部落'
+'Efectos (Estrella, POW)': 无敌星/POW特效
+Controles Tactiles: 虚拟按键
+Controles SM4J: 经典控制
+La condición especial ya no puede cumplirse: 无法达成通关条件
+¡Genial!: 赞!
+¡Así No!: 不好!
+Continuar: 继续
+Volver a empezar: 重新开始
+Salir: 回
+Guardabot: 机器人
+Niveles Mundiales: 全球关卡
+NOMBRE DE USUARIO: 用户名
+Usuario: 用户
+Contraseña: 密码
+Código: 编号
+Error al recuperar los datos: 连接服务器失败
+'Para poder publicar el nivel, debes comprobar': 要上传这个关卡，
+que puedes superarlo. ¿Quieres intentarlo ahora?: 你必须先通过关卡。
+¡Superalo desde el principio!: 从关卡开头过关!
+¡Superalo desde el checkpoint!: 从中间旗过关!
+Publicando..: 上传中...
+Hubo un Problema al publicar el nivel: 关卡上传失败
+Copiar y Salir: 复制 ID
+Nivel descargado: 下载完成
+El nivel ya existe: 关卡已存在
+Feliz Navidad: 圣诞快乐
+Ya es DOMINGO: 周日到了
+A hacer niveles se ha dicho: 一起来制造吧
+DOMINGO: 周日
+LUNES: 一
+MARTES: 周二
+MIERCOLES: 周三
+JUEVES: 周四
+VIERNES: 周五
+SABADO: 周六
+No hay conexion a internet: 未连接网络
+Tiempo de conexion agotado: 连接超时
+Programador: 编写者
+'Sonido/': '音效/'
+Spriters: 素材
+'Animación & Efectos': 动画和特效
+Tipografía: 软件
+Aportes Adicionales: 其他贡献者
+Agradecimientos Especiales: 特别感谢
+Power by/Recursos: 游戏引擎
