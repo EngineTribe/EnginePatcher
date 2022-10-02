@@ -20,18 +20,18 @@ for str in locale:
         exit()
     elif len(str_original.encode(codec))==len(str_replace.encode(codec)):
         if str_original in whitelist:
-            print("替换全部 "+ str_original)
+            print("替换全部 "+ str_original + ' 到 ' + str_replace)
             package=package.replace(bytes(str_original,codec),bytes(str_replace,codec))
         else:
-            print("替换一个 "+ str_original)
+            print("替换一个 "+ str_original + ' 到 ' + str_replace)
             package=package.replace(bytes(str_original,codec),bytes(str_replace,codec),1)
     elif len(str_original.encode(codec))>len(str_replace.encode(codec)):
         space_count=(len(str_original.encode(codec))-len(str_replace.encode(codec)))/2
         if str_original in whitelist:
-            print("替换全部 "+ str_original)
+            print("替换全部 "+ str_original + ' 到 ' + str_replace)
             package=package.replace(bytes(str_original,codec),bytes(" "*math.ceil(space_count)+str_replace+" "*math.floor(space_count),codec))
         else:
-            print("替换一个 "+ str_original)
+            print("替换一个 "+ str_original + ' 到 ' + str_replace)
             package=package.replace(bytes(str_original,codec),bytes(" "*math.ceil(space_count)+str_replace+" "*math.floor(space_count),codec),1)
 tokens=yaml.load(open('tokens.yaml'),Loader=yaml.FullLoader)
 for key in tokens:

@@ -1,6 +1,6 @@
 font_as.ttf: fontcjk.ttf
 JUGAR: PLAY
-2019-2022 | Franyer: Engine Tribe
+2019-2022 | Franyer: Engine Tribe v3.1
 INICIAR SESION: USER LOGIN
 ¡ADVERTENCIA!: DISCLAIMER
 Este es un "Fan Game" (De fans para fans): This game is a fan game
@@ -12,7 +12,7 @@ Activado: Enabled
 Desactivado: Disabled
 Idioma: Lang.
 Español: English
-Detallados: Details
+Detallados: Detailed
 Personaje: Character
 Ventana: Window
 Sonidos: Volume
@@ -32,20 +32,20 @@ Habilidad: Technical
 Disparos: Shooter
 Contra jefes: Boss battle
 En solitario: Singleplayer
-Aceptar: Accept
+Aceptar: OK
 No hay elementos para guardar: Can't save empty level
 Nivel Guardado Corectamente: Save completed
-'Se procedera a cargar un nivel, se borrarán': This will replace all objects
-todos los elementos colocados hasta ahora.: 'in the current level,'
-¿Deseas continuar?: continue?
-Publicar: Publish
+'Se procedera a cargar un nivel, se borrarán': A course will be loaded, all the elements
+todos los elementos colocados hasta ahora.: placed so far will be deleted.
+¿Deseas continuar?: Continue?
+Publicar: Upload
 Editar: Edit
 Jugar: Play
 Explorar Niveles: Browse Levels
 Juego Local: Multiplayer
 Desafio Super Mario: Mario Challenge
 Prometedores: Featured
-Sin Record: No record
+Sin Record: No Record
 Se agrego a prometedores: Added to featured
 Se elimino de prometedores: Added to featured
 #Record: Record
@@ -54,13 +54,13 @@ Novedades: Latest
 Busqueda: Browse
 Descargar: Download
 Reportar: Report
-ID del nivel: Level id
+ID del nivel: Course ID
 Victorias: ClearRate
 Cargando: Loading
 NOMBRE DEL NIVEL: LEVEL NAME
 NOMBRE DEL CREADOR: MAKER NAME
 ESTILO DEL JUEGO: GAME STYLE
-Cualquiera: Any
+Cualquiera: All
 TEMA DEL CURSO: LEVEL THEME
 DIFICULTAD: DIFFICULTY
 TIEMPO: TIME
@@ -98,25 +98,25 @@ Mas antiguos: Older
 Mis gustados: Liked
 Mis no gustados: Not liked
 Llega a la meta sin recibir daño: Reach goal without taking damage
-Llega a la meta sin tocar el suelo una vez: Reach the goal without
-que hayas separado los pies de el: touching ground once
-Llega a la meta sin tocar el suelo una vez que: Reach the goal without
-hayas separado los pies de él: touching ground once
+Llega a la meta sin tocar el suelo una vez: Reach the goal without landing
+que hayas separado los pies de el: after leaving the ground
+Llega a la meta sin tocar el suelo una vez que: Reach the goal without landing
+hayas separado los pies de él: after leaving the ground
 Llega a la meta sin salir del agua: Reach goal without leaving water
-Llega a la meta sin recoger ninguna moneda: Reach goal without collecting any coins
+Llega a la meta sin recoger ninguna moneda: Reach goal without collecting any coin
 
 Ninguno: None
 Lento: Slow
 Rapido: Fast
 SUPER MARIO MAKER WORLD ENGINE: 'SMM:WE ENGINE TRIBE'
-'Efectos (Estrella, POW)': 'Effects (Star, POW)'
+'Efectos (Estrella, POW)': 'Effects (Star & POW)'
 Controles Tactiles: Touch controller
 Controles SM4J: SM4Jcontroller
-La condición especial ya no puede cumplirse: Unable to meet clear conditions
-¡Genial!: Like!
+La condición especial ya no puede cumplirse: Clear Condition Failed
+¡Genial!: I like it
 ¡Así No!: Boo!
 Continuar: Continue
-Volver a empezar: Restart
+Volver a empezar: Start Over
 Guardabot: Coursebot
 Niveles Mundiales: Course World
 NOMBRE DE USUARIO: USERNAME
@@ -124,19 +124,19 @@ Usuario: User
 Contraseña: Password
 Código: Code
 Error al recuperar los datos: Error retrieving data
-'Para poder publicar el nivel, debes comprobar': In order to publish the level, you must prove
-que puedes superarlo. ¿Quieres intentarlo ahora?: that you can beat it. Try it now?
-¡Superalo desde el principio!: Clear from start point!
-¡Superalo desde el checkpoint!: Clear from checkpoint!
-Publicando..: Publishing..
-Hubo un Problema al publicar el nivel: Failed to publish level
-Copiar y Salir: 'Copy & Back'
-Salir: Back
+'Para poder publicar el nivel, debes comprobar': You need to clear the course before
+que puedes superarlo. ¿Quieres intentarlo ahora?: uploading it. Ready to do a clear check?
+¡Superalo desde el principio!: Clear from the start.
+¡Superalo desde el checkpoint!: Clear from checkpoint.
+Publicando..: Uploading...
+Hubo un Problema al publicar el nivel: Failed to upload level
+Copiar y Salir: 'Copy & Exit'
+Salir: Exit
 Nivel descargado: Level downloaded
 El nivel ya existe: Already exists
 Feliz Navidad: Merry Xmas
 Ya es DOMINGO: It's SUNDAY
-A hacer niveles se ha dicho: let's make
+A hacer niveles se ha dicho: Let's get making
 DOMINGO: SUN.
 LUNES: MON.
 MARTES: TUE.
@@ -156,3 +156,4 @@ Agradecimientos Especiales: Special Thanks
 Power by/Recursos: Powered by
 Código: Code
 Reintentar: Refresh
+Ingrese el nombre del nivel: Level name required
