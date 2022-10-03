@@ -1,12 +1,12 @@
 font_as.ttf: fontcjk.ttf
 JUGAR: PLAY
-2019-2022 | Franyer: Engine Tribe v3.1
+2019-2022 | Franyer: Engine Tribe v3.2
 INICIAR SESION: USER LOGIN
 ¡ADVERTENCIA!: DISCLAIMER
 Este es un "Fan Game" (De fans para fans): This game is a fan game
 por lo cual no está respaldado por Nintendo.: which is not endorsed by Nintendo.
-'Todas las imagenes, músicas y recursos utilizados': The copyright of the images, sounds
-en este son propiedad de Nintendo.: and others is owned by Nintendo.
+'Todas las imagenes, músicas y recursos utilizados': All images, music and resources used
+en este son propiedad de Nintendo.: in this are owned by Nintendo.
 Graficos: Graphics
 Activado: Enabled
 Desactivado: Disabled
@@ -41,7 +41,7 @@ todos los elementos colocados hasta ahora.: placed so far will be deleted.
 Publicar: Upload
 Editar: Edit
 Jugar: Play
-Explorar Niveles: Browse Levels
+Explorar Niveles: Explore Courses
 Juego Local: Multiplayer
 Desafio Super Mario: Mario Challenge
 Prometedores: Featured
@@ -51,23 +51,23 @@ Se elimino de prometedores: Added to featured
 #Record: Record
 Populares: Popular
 Novedades: Latest
-Busqueda: Browse
+Busqueda: Search
 Descargar: Download
 Reportar: Report
 ID del nivel: Course ID
 Victorias: ClearRate
 Cargando: Loading
-NOMBRE DEL NIVEL: LEVEL NAME
+NOMBRE DEL NIVEL: COURSE NAME
 NOMBRE DEL CREADOR: MAKER NAME
 ESTILO DEL JUEGO: GAME STYLE
 Cualquiera: All
-TEMA DEL CURSO: LEVEL THEME
+TEMA DEL CURSO: COURSE THEME
 DIFICULTAD: DIFFICULTY
 TIEMPO: TIME
 HISTORIAL: RECORD
 REACCION: REACTION
 ORDEN: ORDER
-IDENTIFICADOR: LEVEL ID
+IDENTIFICADOR: COURSE ID
 BUSCAR: SEARCH
 #New Super Mario Bros U: 新超马U
 #Super Mario Bros 3: 超马3代
@@ -94,9 +94,9 @@ Ultima semana: 'Last week'
 Ultimo mes: 'Last month'
 Mis Superados: Cleared
 Mis no superados: Not cleared
-Mas antiguos: Older
+Mas antiguos: Oldest
 Mis gustados: Liked
-Mis no gustados: Not liked
+Mis no gustados: Boo'ed
 Llega a la meta sin recibir daño: Reach goal without taking damage
 Llega a la meta sin tocar el suelo una vez: Reach the goal without landing
 que hayas separado los pies de el: after leaving the ground
@@ -110,8 +110,8 @@ Lento: Slow
 Rapido: Fast
 SUPER MARIO MAKER WORLD ENGINE: 'SMM:WE ENGINE TRIBE'
 'Efectos (Estrella, POW)': 'Effects (Star & POW)'
-Controles Tactiles: Touch controller
-Controles SM4J: SM4Jcontroller
+Controles Tactiles: Touch Controls
+Controles SM4J: SM4J Controls
 La condición especial ya no puede cumplirse: Clear Condition Failed
 ¡Genial!: I like it
 ¡Así No!: Boo!
@@ -135,8 +135,8 @@ Salir: Exit
 Nivel descargado: Level downloaded
 El nivel ya existe: Already exists
 Feliz Navidad: Merry Xmas
-Ya es DOMINGO: It's SUNDAY
-A hacer niveles se ha dicho: Let's get making
+Ya es DOMINGO: Happy SUNDAY
+A hacer niveles se ha dicho: Let's get making!
 DOMINGO: SUN.
 LUNES: MON.
 MARTES: TUE.
@@ -156,4 +156,3 @@ Agradecimientos Especiales: Special Thanks
 Power by/Recursos: Powered by
 Código: Code
 Reintentar: Refresh
-Ingrese el nombre del nivel: Level name required
