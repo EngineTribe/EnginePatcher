@@ -44,7 +44,7 @@ for key in tokens:
         package=package.replace(bytes(token,codec),bytes('SMMWEMB'+locale_file.split('.')[0],codec),1)
 print("正在写出文件...")
 if 'libyoyo' in package_orig:
-    package_out='libyoyo.so.patched'
+    package_out='libyoyo.so'
 else:
     package_out='SMM_WE_EngineTribe_'+locale_file.split('.')[0]+'.exe'
 f=open(package_out,"wb")
