@@ -20,3 +20,8 @@
 - Use `patch_server_ip.sh <libyoyo.so>` to replace game server's IP
 
 - Sign the apk which replaced `libyoyo.so` yourself
+
+
+**It should be noted that these patches are only for my release, if you want to use it yourself, you may need to make some modifications.**
+
+**sh files may only work on Linux and macOS.**
