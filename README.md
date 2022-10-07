@@ -3,10 +3,20 @@
 
 #### Usage
 
-Use `patch.py` to replace strings
+##### To patch SMM:WE for PC
 
-Use `patch_server_ip.sh <Patched file name>` to replace game server's IP
+- Use `patch.py` to replace strings (It's Chinese, you may need a translator)
 
-Use `package_pc.sh` to package PC patch
+- Use `patch_server_ip.sh <SMM_WE_EngineTribe_XX.exe>` to replace game server's IP
 
-Use `package_android.sh <Original SMM:WE 3.2.3 APK>` to package Android signed apk
+- Use `package_pc.sh` to package PC patch
+
+##### To patch SMM:WE for Android
+
+- Extract `libyoyo.so` from game
+
+- Use `patch.py` to replace strings (It's Chinese, you may need a translator)
+
+- Use `patch_server_ip.sh <libyoyo.so>` to replace game server's IP
+
+- Sign the apk which replaced `libyoyo.so` yourself
