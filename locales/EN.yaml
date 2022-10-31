@@ -17,7 +17,7 @@ Personaje: Character
 Ventana: Window
 Sonidos: Volume
 Sesion iniciada: Logged in
-Guardar Nivel: Save level
+Guardar Nivel: Save course
 Tradicional: Standard
 Puzles: Puzzle
 Contrarreloj: Speedrun
@@ -33,7 +33,7 @@ Disparos: Shooter
 Contra jefes: Boss battle
 En solitario: Singleplayer
 Aceptar: OK
-No hay elementos para guardar: Can't save empty level
+No hay elementos para guardar: Can't save empty course
 Nivel Guardado Corectamente: Save completed
 'Se procedera a cargar un nivel, se borrarán': A course will be loaded, all the elements
 todos los elementos colocados hasta ahora.: placed so far will be deleted.
@@ -129,7 +129,7 @@ que puedes superarlo. ¿Quieres intentarlo ahora?: uploading it. Ready to do a c
 ¡Superalo desde el principio!: Clear from the start.
 ¡Superalo desde el checkpoint!: Clear from checkpoint.
 Publicando..: Uploading...
-Hubo un Problema al publicar el nivel: Failed to upload level
+Hubo un Problema al publicar el nivel: Failed to upload course
 Copiar y Salir: 'Copy & Exit'
 Salir: Exit
 Nivel descargado: Level downloaded
@@ -157,3 +157,4 @@ Power by/Recursos: Powered by
 Reintentar: Refresh
 Hoy: Now
 Espera unos instantes...: Please wait...
+Se han guardado los cambios: Course successfully saved
