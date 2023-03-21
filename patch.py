@@ -45,6 +45,8 @@ for key in tokens:
 print("正在写出文件...")
 if 'libyoyo' in package_orig:
     package_out='libyoyo.so'
+elif 'win' in package_orig:
+    package_out='data.win'
 else:
     package_out='SMM_WE_EngineTribe_'+locale_file.split('.')[0]+'.exe'
 f=open(package_out,"wb")
