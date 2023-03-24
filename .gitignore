@@ -130,6 +130,9 @@ dmypy.json
 
 
 #custom
-patch_server_ip.sh
-
-SMM_WE.bak
+working/
+original_packages/
+patched_packages/
+apktool/
+buildtools/
+.idea/

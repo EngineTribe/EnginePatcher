@@ -1,55 +1,234 @@
-#!/usr/bin/python
-import yaml, math
+# !/usr/bin/env python3
 
-package_orig=input('输入原始文件名 (libyoyo.so / SMM_WE.exe): ')
-codec="utf-8"
-locale_file=input('输入语言文件名: (CN.yaml / ES.yaml / EN.yaml) ')
-tokens_file="tokens.json"
-platform=input('输入平台代号 (PC代表电脑, MB代表安卓): ')
+import yaml, os, math, shutil, subprocess, py7zr
 
-print("SMM:WE 引擎部落补丁程序")
-print("By YidaozhanYa")
-whitelist=yaml.load(open('whitelist.yaml'),Loader=yaml.FullLoader)['whitelist']
-package=open(package_orig,"rb").read()
-locale=yaml.load(open('locales/'+locale_file),Loader=yaml.FullLoader)
-for str in locale:
-    str_original=str
-    str_replace=locale[str]
-    if len(str_original.encode(codec))<len(str_replace.encode(codec)):
-        print(str_replace+' 字符串的长度超出要求')
-        exit()
-    elif len(str_original.encode(codec))==len(str_replace.encode(codec)):
-        if str_original in whitelist:
-            print("替换全部 "+ str_original + ' 到 ' + str_replace)
-            package=package.replace(bytes(str_original,codec),bytes(str_replace,codec))
+
+def patch(
+        package_orig_filename: str,
+        platform: str,
+        output_dir: str,
+        keystore_password: str,
+        game_version: str,
+        locale: str,
+        source_api: str,
+        target_api: str,
+        token_prefix: str,
+        apksigner: str,
+        apktool: str
+):
+    if os.path.exists('working'):
+        shutil.rmtree('working')
+    os.makedirs('working')
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    def extract_package_windows():
+        process = subprocess.Popen(
+            ['7z', 'x', '-y', '-o' + os.path.join('working'), package_orig_filename],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        process.wait()
+
+    def strip_package_windows():
+        for file in ['$PLUGINSDIR', '$TEMP']:
+            if os.path.exists(os.path.join('working', file)):
+                shutil.rmtree(
+                    os.path.join('working', file),
+                )
+        for file in ['uninst.exe', 'unins000.dat', 'unins000.exe']:
+            if os.path.exists(os.path.join('working', file)):
+                os.remove(
+                    os.path.join('working', file),
+                )
+        if os.path.exists(os.path.join('working', 'SMM-WE.exe')):
+            os.rename(
+                os.path.join('working', 'SMM-WE.exe'),
+                os.path.join('working', 'SMM_WE.exe')
+            )
+        if not os.path.exists(os.path.join('working', 'splash.png')):
+            shutil.copyfile(
+                os.path.join('splash.png'),
+                os.path.join('working', 'splash.png')
+            )
+        shutil.copyfile(
+            os.path.join('fonts', 'fontcjk.ttf'),
+            os.path.join('working', 'fontcjk.ttf')
+        )
+        if os.path.exists(os.path.join('working', 'font_as.ttf')):
+            os.remove(
+                os.path.join('working', 'font_as.ttf'),
+            )
+
+    def game_executable_filename_windows() -> str:
+        return 'data.win' if os.path.exists(os.path.join('working', 'data.win')) else 'SMM_WE.exe'
+
+    def output_package_filename_windows() -> str:
+        return f'SMM_WE_EngineTribe_{game_version}_PC_{locale}.7z'
+
+    def repack_windows():
+        archive_filename = os.path.join(output_dir, output_package_filename_windows())
+        archive = py7zr.SevenZipFile(archive_filename, 'w')
+        archive.writeall('working')
+        archive.close()
+
+    def extract_package_android():
+        process = subprocess.Popen(
+            [
+                apktool,
+                'd',
+                '-f',
+                '-o',
+                os.path.join('working'),
+                package_orig_filename
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        process.wait()
+
+    def strip_package_android():
+        shutil.copyfile(
+            os.path.join('fonts', 'fontcjk.ttf'),
+            os.path.join('working', 'assets', 'fontcjk.ttf')
+        )
+        if os.path.exists(os.path.join('working', 'assets', 'font_as.ttf')):
+            os.remove(
+                os.path.join('working', 'assets', 'font_as.ttf'),
+            )
+        # ignore "!!"
+        apktool_yaml = yaml.load(
+            '\n'.join(open(os.path.join('working', 'apktool.yml'), 'r').readlines()[1:]),
+            Loader=yaml.FullLoader,
+
+        )
+        version_name=apktool_yaml['versionInfo']['versionName']
+        if 'ET' not in version_name:
+            version_name = version_name + f' ET {game_version}'
+        apktool_yaml['versionInfo']['versionName'] = version_name
+        open(os.path.join('working', 'apktool.yml'), 'w').write(
+            f'!!brut.androlib.meta.MetaInfo\n' +
+            yaml.dump(apktool_yaml)
+        )
+
+    def game_executable_filename_android() -> str:
+        size = os.path.getsize(os.path.join('working', 'lib', 'armeabi-v7a', 'libyoyo.so'))
+        return 'lib/armeabi-v7a/libyoyo.so' if size > 9 * 1024 * 1024 else 'assets/game.droid'
+
+    def output_package_filename_android() -> str:
+        return f'SMM_WE_EngineTribe_{game_version}_Android_{locale}.apk'
+
+    def repack_android():
+        filename = os.path.join(output_dir, output_package_filename_android())
+        process = subprocess.Popen(
+            [
+                apktool,
+                'b',
+                '-o',
+                filename,
+                os.path.join('working')
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        process.wait()
+        process = subprocess.Popen(
+            [
+                apksigner,
+                'sign',
+                '--ks',
+                'keystore/enginetribe.keystore',
+                '--ks-key-alias',
+                'EngineTribe',
+                filename
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE,
+        )
+        process.communicate(input=keystore_password.encode('utf-8'))
+        process.wait()
+
+    match platform:
+        case 'PC':
+            extract_package = extract_package_windows
+            strip_package = strip_package_windows
+            game_executable_filename = game_executable_filename_windows
+            output_package_filename = output_package_filename_windows
+            repack = repack_windows
+        case 'MB':
+            extract_package = extract_package_android
+            strip_package = strip_package_android
+            game_executable_filename = game_executable_filename_android
+            output_package_filename = output_package_filename_android
+            repack = repack_android
+        case _:
+            raise Exception('Unsupported platform (PC/MB)')
+    if os.path.exists(os.path.join(output_dir, output_package_filename())):
+        print('Package already patched, skipping...')
+        return
+    print('  Extracting package...')
+    extract_package()
+    print('  Stripping package...')
+    strip_package()
+    print('  Replacing strings...')
+    tokens: list[str] = yaml.safe_load(open('tokens.yaml', 'r'))['tokens']
+    token: str = f'{token_prefix}{platform}{locale}'.upper()
+    locale_file = yaml.safe_load(open(f'locales/{locale}.yaml', 'r'))
+    whitelist: list[str] = yaml.safe_load(open('whitelist.yaml', 'r'))['whitelist']
+    package: bytes = open(os.path.join('working', game_executable_filename()), 'rb').read()
+
+    for key in locale_file:
+        original_key: bytes = key.encode()
+        replaced_key: bytes = locale_file[key].encode()
+        if len(original_key) < len(replaced_key):
+            raise Exception(f'Original string {original_key} is longer than replaced string {replaced_key}')
+        elif len(original_key) == len(replaced_key):
+            if key in whitelist:
+                package = package.replace(original_key, replaced_key)
+            else:
+                package = package.replace(original_key, replaced_key, 1)
         else:
-            print("替换一个 "+ str_original + ' 到 ' + str_replace)
-            package=package.replace(bytes(str_original,codec),bytes(str_replace,codec),1)
-    elif len(str_original.encode(codec))>len(str_replace.encode(codec)):
-        space_count=(len(str_original.encode(codec))-len(str_replace.encode(codec)))/2
-        if str_original in whitelist:
-            print("替换全部 "+ str_original + ' 到 ' + str_replace)
-            package=package.replace(bytes(str_original,codec),bytes(" "*math.ceil(space_count)+str_replace+" "*math.floor(space_count),codec))
-        else:
-            print("替换一个 "+ str_original + ' 到 ' + str_replace)
-            package=package.replace(bytes(str_original,codec),bytes(" "*math.ceil(space_count)+str_replace+" "*math.floor(space_count),codec),1)
-tokens=yaml.load(open('tokens.yaml'),Loader=yaml.FullLoader)
-for key in tokens:
-    token = tokens[key]
-    if platform=="PC":
-        print("替换 "+ token + " 令牌 for PC")
-        package=package.replace(bytes(token,codec),bytes('SMMWEPC'+locale_file.split('.')[0],codec),1)
-    elif platform=="MB":
-        print("替换 "+ token + " 令牌 for MB")
-        package=package.replace(bytes(token,codec),bytes('SMMWEMB'+locale_file.split('.')[0],codec),1)
-print("正在写出文件...")
-if 'libyoyo' in package_orig:
-    package_out='libyoyo.so'
-elif 'win' in package_orig:
-    package_out='data.win'
-else:
-    package_out='SMM_WE_EngineTribe_'+locale_file.split('.')[0]+'.exe'
-f=open(package_out,"wb")
-f.write(package)
-f.close()
-print("打补丁完成!")
+            left_padding: bytes = b'\x00' * math.floor((len(original_key) - len(replaced_key)) / 2)
+            right_padding: bytes = b'\x00' * math.ceil((len(original_key) - len(replaced_key)) / 2)
+            if key in whitelist:
+                package = package.replace(original_key, left_padding + replaced_key + right_padding)
+            else:
+                package = package.replace(original_key, left_padding + replaced_key + right_padding, 1)
+    for key in tokens:
+        package = package.replace(key.encode(), token.encode())
+    package = package.replace(source_api.encode(), target_api.encode())
+    print('  Writing game executable...')
+    open(os.path.join('working', game_executable_filename()), 'wb').write(package)
+    print('  Repacking package...')
+    repack()
+
+    print('Done for', platform, locale, game_version, package_orig_filename, output_package_filename())
+
+
+if __name__ == '__main__':
+    package_orig_filename: str | None = os.environ.get('ORIGINAL_PACKAGE_FILENAME')
+    keystore_password: str | None = os.environ.get('KEYSTORE_PASSWORD')
+    game_version: str | None = os.environ.get('GAME_VERSION')
+    locale: str | None = os.environ.get('LOCALE')
+    source_api: str | None = os.environ.get('SOURCE_API')
+    target_api: str | None = os.environ.get('TARGET_API')
+    token_prefix: str | None = os.environ.get('TOKEN_PREFIX')
+    platform: str | None = os.environ.get('PLATFORM')
+    apksigner: str = os.environ.get('APKSIGNER', 'apksigner')
+    apktool: str = os.environ.get('APKTOOL', 'apktool')
+    output_dir: str = os.environ.get('OUTPUT_DIR', 'output')
+    patch(
+        package_orig_filename,
+        platform,
+        output_dir,
+        keystore_password,
+        game_version,
+        locale,
+        source_api,
+        target_api,
+        token_prefix,
+        apksigner,
+        apktool
+    )

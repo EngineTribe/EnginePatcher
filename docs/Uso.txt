@@ -1,1 +1,0 @@
-Coloque todos los archivos en el paquete 7z en su carpeta SMM: WE 3.2.3 instalada y luego inicie el exe con EngineTribe en su nombre.

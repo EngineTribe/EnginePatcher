@@ -1,0 +1,33 @@
+name: Engine Patcher
+
+on:
+  workflow_dispatch:
+    inputs:
+      token_prefix:
+        description: 'Token prefix'
+        required: true
+        default: 'SMMWE'
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    env:
+      TOKEN_PREFIX: ${{ github.event.inputs.token_prefix }}
+      KEYSTORE_PASSWORD: ${{ github.secrets.KEYSTORE_PASSWORD }}
+      SOURCE_API: ${{ github.secrets.SOURCE_API }}
+      TARGET_API: ${{ github.secrets.TARGET_API }}
+    steps:
+      - uses: actions/checkout@v2
+        name: "📦 Clone repository"
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v2
+        name: "🐍 Setup Python"
+        with:
+          python-version: '3.10'
+      - name: "📦 Install dependencies"
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: "🔧 Patch"
+        run: python patch.py
