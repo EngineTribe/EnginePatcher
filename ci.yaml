@@ -3,6 +3,7 @@ locales:
   - CN
   - EN
   - ES
+  - PT
 platforms:
   PC: 'https://viniochinslz.live/0:/SMM_WE/3.3.4/Windows_fix2.exe'
   MB: 'https://file.yidaozhan.top/d/EngineTribeReleases/SMM_WE_EngineTribe_v3.3.3_Android_ES.apk'
